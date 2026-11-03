@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: adeimlin <adeimlin@student.42porto.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 17:20:58 by adeimlin          #+#    #+#             */
-/*   Updated: 2026/04/20 12:34:07 by adeimlin         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
@@ -20,19 +8,15 @@
 
 class PhoneBook
 {
+private:
+	size_t cur_index_;
+	void add_();
+	void search_();
+	Contact	contacts[8];
+
 public:
 	PhoneBook(void);
-	int			read(void);
-
-private:
-	void		add_();
-	void		search_();
-
-private:
-	size_t		cur_index_;
-
-public:
-	Contact	contacts[8];
+	int read(void);
 };
 
 #endif
